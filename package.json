@@ -1,0 +1,23 @@
+{
+  "name": "calldrone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alexey",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-batch": "^1.0.5",
+    "gulp-haml": "^0.1.6",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^2.3.2",
+    "gulp-scss": "^1.4.0",
+    "gulp-slim": "^0.3.0",
+    "gulp-watch": "^4.3.9",
+    "hamljs": "^0.6.2"
+  }
+}

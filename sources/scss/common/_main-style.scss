@@ -1,0 +1,159 @@
+a, p, span, div,
+h1, h2, h3, h4, h5, h6,
+ul, li,
+input, textarea, button,
+:before, :after {
+  @include box-sizing;
+}
+a {
+  @include transition-main;
+}
+b {
+  font-weight: bold;
+}
+i {
+  font-style: italic;
+}
+html {
+  font-size: 20px;
+  @include helveticaReg;
+
+  @media all and (max-width: 950px) {
+    font-size: 18px;
+  }
+  @media all and (max-width: 450px) {
+    font-size: 16px;
+  }
+}
+body {
+  min-width: 320px;
+  padding-top: 10rem;
+
+  &.hidden {
+    overflow: hidden;
+  }
+}
+.content_wrapper {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include content-wrapper;
+}
+.section_title {
+  @include helveticaLight;
+  color: $blue2028;
+  font-size: 1.7rem;
+  line-height: 2.15rem;
+  text-align: center;
+  max-width: 23rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.section_title_big {
+    font-size: 2.7rem;
+  }
+}
+.section_post_title {
+  color: $gray819;
+  @include helveticaLight;
+  font-size: 1.1rem;
+  line-height: 2rem;
+  text-align: center;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+* + .section_post_title {
+  margin-top: 2.5rem;
+}
+.main_button {
+  @include border-radius(30px);
+  background-color: $blue36c;
+  color: $white;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 2.4rem;
+  white-space: nowrap;
+}
+.marklist {
+  list-style: none;
+  @include helveticaLight;
+  font-size: 1rem;
+  line-height: 1.5rem;
+
+  li {
+    position: relative;
+    padding-left: 1.9rem;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: .9rem;
+      border-top: .1rem solid $blue65c;
+      margin-top: .7rem;
+    }
+    .marklist {
+      margin-top: .75rem;
+      font-size: .8rem;
+      line-height: 1.6rem;
+
+      li:before {
+        margin-top: .75rem;
+      }
+      &.checkmark li:before {
+        margin-top: .5rem;
+      }
+    }
+  }
+  &.checkmark {
+
+    & > li {
+      padding-left: 1.5rem;
+
+      &:before {
+        @include transform(rotate(135deg));
+        margin-top: .5rem;
+        width: .6rem;
+        height: .4rem;
+        border-right: .1rem solid $blue65c;
+      }
+    }
+  }
+}
+* + .marklist {
+  margin-top: 1.5rem;
+}
+.marker_text_box_green {
+  background-color: $greenB3;
+  display: block;
+  color: $green1f;
+  font-size: .75rem;
+  line-height: 1.3rem;
+  padding: 1.25rem 1.5rem;
+}
+* + .marker_text_box_green {
+  margin-top: .6rem;
+}
+.figure_arch {
+  overflow: hidden;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    @include border-radius(50%);
+    border: 1px solid #4aa227;
+  }
+}
+.popup_anchor {
+
+  &.disabled {
+    cursor: default;
+  }
+}

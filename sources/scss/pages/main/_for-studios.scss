@@ -1,0 +1,12 @@
+.for_studios {
+  @include section-padding;
+  text-align: center;
+
+  * + .main_button {
+    margin-top: 2.75rem;
+  }
+  .content_wrapper {
+    padding-top: 1.5rem;
+    padding-bottom: 1.4rem;
+  }
+}

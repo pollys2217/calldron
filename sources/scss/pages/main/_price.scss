@@ -1,0 +1,50 @@
+.price {
+  @include section-padding;
+
+  .section_title + * {
+    margin-top: 2.6rem;
+  }
+  &_table {
+    border: .25rem solid $blue65c;
+    @include border-radius(15px);
+    @include flexbox;
+
+    &_one {
+      width: 100%;
+      padding: 2rem 2.5rem 2.5rem;
+      @include flexbox;
+
+      & + * {
+        border-left: 1px solid $grayE7f;
+      }
+      &_img {
+
+        & + * {
+          margin-left: 1rem;
+        }
+      }
+      &_name {
+        @include helveticaLight;
+        font-size: .75rem;
+        line-height: 1.05rem;
+
+        & + * {
+          margin-top: 1rem;
+        }
+      }
+      &_number {
+        font-size: 1.05rem;
+        line-height: 1;
+      }
+    }
+    &_footnote {
+      color: $gray99;
+      font-size: .7rem;
+      line-height: 1.05rem;
+      text-align: center;
+    }
+  }
+  * + .price_table_footnote {
+    margin-top: 1.6rem;
+  }
+}

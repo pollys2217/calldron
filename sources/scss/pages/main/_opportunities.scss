@@ -1,0 +1,29 @@
+.opportunities {
+  background: url("../images/main/opportunities-bg.jpg") center no-repeat;
+  overflow: hidden;
+  border-bottom: 1px solid $grayE7f;
+  @include section-padding;
+
+  &_list {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+    padding-bottom: .3rem;
+
+    &_item {
+      width: 33.333333%;
+      text-align: center;
+      margin-top: 2.25rem;
+      padding: 0 calc(10%/3);
+
+      &_img + * {
+        margin-top: .5rem;
+      }
+      &_text {
+        color: $gray819;
+        font-size: .9rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+}

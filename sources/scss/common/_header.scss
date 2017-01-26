@@ -1,0 +1,204 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: $blue1e;
+  color: $white;
+  z-index: 9999;
+
+  &_top {
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(center);
+    padding: 1.375rem 0;
+    border-bottom: 1px solid $blue263;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: .5rem;
+      height: .5rem;
+      border-left: 1px solid $blue263;
+      border-top: 1px solid $blue263;
+      left: 50%;
+      bottom: -.25rem;
+      background-color: $blue1e;
+      @include transform(rotate(45deg));
+    }
+    .header_link_wrapper {
+
+      &:not(:first-child) {
+        margin-left: .75rem;
+      }
+      &:not(:last-child) {
+        margin-right: 1.55rem;
+        position: relative;
+
+        &:after {
+          content: '';
+          display: block;
+          width: .8rem;
+          height: 1px;
+          background-color: $white;
+          position: absolute;
+          margin-left: .75rem;
+          left: 100%;
+          top: 50%;
+          @include opacity(.28);
+          z-index: 1;
+        }
+      }
+    }
+  }
+  &_bottom {
+    padding: 1.85rem 0;
+
+    &_nav {
+
+      .header_link_wrapper {
+
+        &:not(:last-child) {
+          margin-right: 1.6rem;
+        }
+        &:not(.active) {
+
+          .header_nav_link {
+
+            &:before {
+              content: '';
+              display: block;
+              position: absolute;
+              border-bottom: 1px dashed $blue224;
+              width: 100%;
+              height: .3rem;
+              left: 0;
+              top: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  &_nav {
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    @include helveticaLight;
+    font-size: .75rem;
+
+    &_link {
+      white-space: nowrap;
+      position: relative;
+      z-index: 9;
+    }
+  }
+  &_link_wrapper {
+
+    &.active {
+      color: $purple72;
+      position: relative;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        @include box-sizing(content-box);
+        top: 50%;
+        left: 50%;
+        @include transform(translateX(-50%) translateY(-50%));
+        width: 100%;
+        height: 100%;
+        padding: .6rem .75rem;
+        @include border-radius(8px);
+        background-color: $black;
+        @include opacity(.17);
+        z-index: 1;
+      }
+    }
+  }
+  &_authorization {
+
+    &_link.main_button {
+      font-size: .85rem;
+      @include helveticaLight;
+      padding: .7rem 2.5rem;
+      position: relative;
+    }
+    &_popup {
+      position: absolute;
+      background-color: $white;
+      padding: .7rem .7rem 1.2rem;
+      @include border-radius(4px);
+      @include box-shadow(0 0 .25rem 0 rgba(0, 9, 47, .14));
+      border: 1px solid $greenD1d;
+      right: 0;
+      top: 100%;
+      margin-top: 4.85rem;
+      z-index: 999;
+      display: none;
+
+      &.active {
+
+      }
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        background-color: inherit;
+        border-top: 1px solid $greenD1d;
+        border-left: 1px solid $greenD1d;
+        width: .5rem;
+        height: .5rem;
+        top: -.25rem;
+        right: 33.333333%;
+        @include transform(rotate(45deg));
+      }
+    }
+    &_form {
+
+      &_input {
+        border: 1px solid $grayE7e5;
+        @include border-radius(8px);
+        height: 2.45rem;
+        width: 13.1rem;
+        padding: 0 1rem;
+        @include helveticaLight;
+        font-size: .7rem;
+
+        @include placeholder {
+          color: $gray526;
+        }
+      }
+      &_button {
+        font-size: .85rem;
+        @include helveticaLight;
+        margin: 0;
+        padding: .625rem 1.8rem;
+      }
+      &_link {
+        display: block;
+        color: $blue6b9;
+        @include helveticaLight;
+        font-size: .7rem;
+        line-height: .95rem;
+        border-bottom: 1px solid $blued1e;
+        margin-top: .5rem;
+      }
+    }
+    &_fieldset {
+      @include flexbox;
+      @include align-items(center);
+
+      & + * {
+        margin-top: .55rem;
+      }
+      &_inner {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}

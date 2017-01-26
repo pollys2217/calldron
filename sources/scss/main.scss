@@ -1,0 +1,15 @@
+@import 'common/mixins';
+@import 'common/reset';
+@import 'common/main-style';
+@import 'common/header';
+
+  /*page*/
+
+//main
+@import 'pages/main/callback-widget';
+@import 'pages/main/opportunities';
+@import 'pages/main/price';
+@import 'pages/main/opportunities-detail';
+@import 'pages/main/for-studios';
+
+@import 'common/footer';

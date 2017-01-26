@@ -1,0 +1,41 @@
+%header.header
+  .content_wrapper
+    .header_top
+      .header_logo
+        %img(src="images/main/logow.png" alt="")
+      %nav
+        %ul.header_top_nav.header_nav
+          %li.header_link_wrapper
+            %a.header_top_nav_link.header_nav_link(href="#" target="_blank" ) Главная
+          %li.header_link_wrapper.active
+            %span.header_top_nav_link.header_nav_link(href="#" target="_blank" ) Виджет звонка
+          %li.header_link_wrapper
+            %a.header_top_nav_link.header_nav_link(href="#" target="_blank" ) API
+          %li.header_link_wrapper
+            %a.header_top_nav_link.header_nav_link(href="#" target="_blank" ) Блог
+      .header_authorization
+        %a.header_authorization_link.main_button.popup_anchor(href="#" data-popup-anchor="authorization_popup") Авторизация
+        .header_authorization_popup.popup_wrapper#authorization_popup
+          %form.header_authorization_form(action="#" method="post")
+            .header_authorization_fieldset
+              %input.header_authorization_form_input(type="text" name="user[login]" placeholder="Логин")
+            .header_authorization_fieldset
+              %input.header_authorization_form_input(type="password" name="user[password]" placeholder="Пароль")
+              %span.question_icon
+            .header_authorization_fieldset
+              %button.main_button.header_authorization_form_button Войти
+              .header_authorization_fieldset_inner
+                %a.header_authorization_form_link(href="#") Регистрация
+    .header_bottom
+      %nav
+        %ul.header_bottom_nav.header_nav.header_nav_anchor
+          %li.header_link_wrapper.active
+            %a.header_bottom_nav_link.header_nav_link.inside_page_anchor(href="#callback_widget") Обратный звонок
+          %li.header_link_wrapper
+            %a.header_bottom_nav_link.header_nav_link.inside_page_anchor(href="#opportunities_calldron") Возможности Calldron
+          %li.header_link_wrapper
+            %a.header_bottom_nav_link.header_nav_link.inside_page_anchor(href="#price") Стоимость
+          %li.header_link_wrapper
+            %a.header_bottom_nav_link.header_nav_link.inside_page_anchor(href="#opportunities") Возможности
+          %li.header_link_wrapper
+            %a.header_bottom_nav_link.header_nav_link.inside_page_anchor(href="#for_studios") Агентствам
